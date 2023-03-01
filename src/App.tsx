@@ -10,7 +10,9 @@ import InformationPage from './pages/InformationPage';
 import TicketPage from './pages/TicketPage';
 import SuccessPage from './pages/SuccessPage';
 
+
 function App() {
+  
   return (
     <Router>
     <Header/>

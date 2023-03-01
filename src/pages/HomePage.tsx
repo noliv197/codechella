@@ -1,6 +1,8 @@
 function HomePage(){
     return(
-        <></>
+        <main>
+            ola
+        </main>
     )
 }
 

@@ -1,8 +1,11 @@
+import Navbar from "./Navbar";
+import HeaderStyled from "./HeaderStyled";
 function Header() {
     return (
-      <div>
-        <h1>Header</h1>
-      </div>
+      <HeaderStyled>
+        <img src="./img/logo.svg" alt="Logo da Codechella" />
+        <Navbar/>
+      </HeaderStyled>
     );
   };
     
