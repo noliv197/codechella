@@ -1,4 +1,5 @@
 import Banner from "../components/Banner"
+import Information from "../components/Information"
 
 function InformationPage(){
     return(
@@ -8,6 +9,7 @@ function InformationPage(){
                 top="65%"
                 content="Informações Gerais"
             />
+            <Information/>
         </main>
     )
 }
