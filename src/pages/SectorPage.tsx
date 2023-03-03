@@ -1,4 +1,5 @@
 import Banner from "../components/Banner"
+import Sector from "../components/Sector"
 
 function SectorPage(){
     return(
@@ -8,6 +9,7 @@ function SectorPage(){
                 top="95%"
                 content="Mapa de Setores"
             />
+            <Sector/>
         </main>
     )
 }
