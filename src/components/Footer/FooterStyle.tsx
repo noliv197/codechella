@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const FooterStyle = styled.div`
+const FooterStyle = styled.footer`
     background-color: ${props => props.theme.background.gradient.dark};
     display: flex;
     align-items: center;

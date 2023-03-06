@@ -1,4 +1,5 @@
 import Banner from "../components/Banner"
+import Form from "../components/Form"
 
 function TicketPage(){
     return(
@@ -8,6 +9,7 @@ function TicketPage(){
                 top="35%"
                 content="Garanta seu ingresso"
             />
+            <Form/>
         </main>
     )
 }
