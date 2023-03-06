@@ -1,29 +1,29 @@
 import styled from "styled-components";
 
 const FooterStyle = styled.div`
-    background-color: ${props => props.theme.colors.summer.background.gradient.dark};
+    background-color: ${props => props.theme.background.gradient.dark};
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: ${props => props.theme.colors.summer.text.secondary};
-    padding: ${props => props.theme.spacing.md};
+    color: ${props => props.theme.text.secondary};
+    padding: var(--spacing-md);
     
     img{
-        filter: ${props => props.theme.colors.summer.filter.secondary};
+        filter: ${props => props.theme.filter.secondary};
     }
     section{
         display: flex;
         flex-direction: column;
     }
     section span:first-child{
-        margin-bottom: ${props => props.theme.spacing.sm};
+        margin-bottom: var(--spacing-sm);
     }
     ul{
         display: flex;
     }
     ul a{
-        color: ${props => props.theme.colors.summer.text.secondary};
-        margin-left: ${props => props.theme.spacing.xs};
+        color: ${props => props.theme.text.secondary};
+        margin-left: var(--spacing-xs);
     }
 `
 

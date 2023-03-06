@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import GlobalStyle from './theme/GlobalStyle';
-import { defaultTheme } from './theme/theme';
+import GlobalVariables from './theme/GlobalVariables';
+import { summer,boreal } from './theme/theme';
 import { ThemeProvider } from 'styled-components';
 
 const root = ReactDOM.createRoot(
@@ -10,7 +11,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={summer}>
+      <GlobalVariables/>
       <GlobalStyle/>
       <App />
     </ThemeProvider>

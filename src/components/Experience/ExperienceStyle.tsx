@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const ExperienceStyle = styled.section`
-    padding: ${props => props.theme.spacing.md};
+    padding: var(--spacing-md);
     
     ul{
         display: flex;

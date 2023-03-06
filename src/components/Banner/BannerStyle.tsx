@@ -16,8 +16,8 @@ const BannerStyle = styled.div`
         // opacity: 1.5;
         width: 450px;
         margin: 0 auto;
-        font-size: ${props => props.theme.typography.size.lg};
-        font-weight: ${props => props.theme.typography.weight.extraBold};
+        font-size: var(--size-lg);
+        font-weight: var(--weight-extraBold);
     }
 `
 

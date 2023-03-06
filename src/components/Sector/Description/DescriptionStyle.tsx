@@ -2,19 +2,19 @@ import styled from "styled-components";
 
 const DescriptionStyle = styled.section`
     text-align: center;
-    padding: ${props=>props.theme.spacing.rg};
+    padding: var(--spacing-rg);
     h2{
-        font-size: ${props=>props.theme.typography.size.md};
-        font-weight: ${props=>props.theme.typography.weight.extraBold};
-        margin: ${props=>props.theme.spacing.md} 0;
-        color: ${props=> props.theme.colors.summer.text.secondary};
+        font-size: var(--size-md);
+        font-weight: var(--weight-extraBold);
+        margin: var(--spacing-md) 0;
+        color: ${props=> props.theme.text.secondary};
     }
     ul{
         display: flex;
         align-items: start;
         justify-content: space-between;
         min-height: 500px;
-        padding: 0 ${props=>props.theme.spacing.md};
+        padding: 0 var(--spacing-md);
     }
     ul li:nth-child(even){
         align-self: end;
@@ -33,15 +33,15 @@ const DescriptionStyle = styled.section`
         border-radius: 16px;
     }
     li h3{
-        font-size: ${props=>props.theme.typography.size.rg};
-        font-weight: ${props=>props.theme.typography.weight.bold};
-        margin: ${props=>props.theme.spacing.sm} 0;
-        color: ${props=> props.theme.colors.summer.text.secondary};
+        font-size: var(--size-rg);
+        font-weight: var(--weight-Bold);
+        margin: var(--spacing-sm) 0;
+        color: ${props=> props.theme.text.secondary};
     }
     li p{
-        font-size: ${props=>props.theme.typography.size.xs};
-        color: ${props=> props.theme.colors.summer.text.secondary};
-        padding: 0 ${props=>props.theme.spacing.sm};
+        font-size: var(--size-xs);
+        color: ${props=> props.theme.text.secondary};
+        padding: 0 var(--spacing-sm);
         line-height: 24px;
     }
 `

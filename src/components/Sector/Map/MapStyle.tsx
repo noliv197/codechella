@@ -11,10 +11,10 @@ const MapStyle = styled.figure`
         height: auto;
     }
     h3{
-        font-size: ${props=>props.theme.typography.size.rg};
-        font-weight: ${props=>props.theme.typography.weight.bold};
-        color: ${props=> props.theme.colors.summer.text.secondary};
-        margin-bottom: ${props=> props.theme.spacing.sm};
+        font-size: var(--size-rg);
+        font-weight: var(--weight-bold);
+        color: ${props=> props.theme.text.secondary};
+        margin-bottom: var(--spacing-sm);
     }
     figcaption{
         flex-grow: 1;
@@ -22,15 +22,15 @@ const MapStyle = styled.figure`
     li{
         display: flex;
         align-items: center;
-        margin-bottom: ${props=> props.theme.spacing.sm};
+        margin-bottom: var(--spacing-sm);
     }
     li div{
         width: 32px;
         height: 32px;
-        margin-right: ${props=> props.theme.spacing.sm};
+        margin-right: var(--spacing-sm);
     }
     li span{
-        color: ${props=> props.theme.colors.summer.text.secondary};
+        color: ${props=> props.theme.text.secondary};
     }
 `
 

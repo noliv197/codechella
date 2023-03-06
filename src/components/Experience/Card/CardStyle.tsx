@@ -5,7 +5,7 @@ const CardStyle = styled.li`
     align-items: center;
     justify-content: space-between;
     height: 380px;
-    margin-bottom: ${props => props.theme.spacing.lg};
+    margin-bottom: var(--spacing-lg);
     
     :nth-child(even) .image{
         order: 1;
@@ -25,17 +25,17 @@ const CardStyle = styled.li`
     .container{
         width: 500px;
         box-sizing: border-box;
-        padding: ${props => props.theme.spacing.rg};
+        padding: var(--spacing-rg);
         flex-grow: 1;
     }
     .container h2{
-        font-size: ${props => props.theme.typography.size.rg};
-        font-weight: ${props => props.theme.typography.weight.bold};
-        color: ${props => props.theme.colors.summer.text.secondary};
-        margin-bottom: ${props => props.theme.spacing.sm};
+        font-size: var(--size-rg);
+        font-weight: var(--weight-bold);
+        color: ${props => props.theme.text.secondary};
+        margin-bottom: var(--spacing-sm);
     }
     .container p{
-        color: ${props => props.theme.colors.summer.text.secondary};
+        color: ${props => props.theme.text.secondary};
         line-height: 25px;
     }
 `

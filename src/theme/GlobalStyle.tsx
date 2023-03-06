@@ -37,13 +37,13 @@ a{
 }
 
 body {
-  font-family: "${props => props.theme.typography.font[0]}", sans-serif;
+  font-family: var(--font-primary), sans-serif;
 }
 main{
   background-image: linear-gradient(
-    ${props => props.theme.colors.summer.background.gradient.light},
-    ${props => props.theme.colors.summer.background.gradient.medium},
-    ${props => props.theme.colors.summer.background.gradient.dark}
+    ${props => props.theme.background.gradient.light},
+    ${props => props.theme.background.gradient.medium},
+    ${props => props.theme.background.gradient.dark}
   )
 }
 `
