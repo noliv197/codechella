@@ -17,6 +17,10 @@ export const summer: DefaultTheme = {
     filter:{
         primary: "brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(320deg) brightness(106%) contrast(101%)",
         secondary: "none"
+    },
+    logo:{
+        name: "./img/logo.svg",
+        symbol: "./img/simbolo-cinza.svg"
     }
 }
 export const boreal: DefaultTheme = {
@@ -37,5 +41,9 @@ export const boreal: DefaultTheme = {
     filter:{
         primary: "brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(320deg) brightness(106%) contrast(101%)",
         secondary: "brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(320deg) brightness(106%) contrast(101%)"
+    },
+    logo:{
+        name: "./img/logo-branco.svg",
+        symbol: "./img/simbolo-branco.svg"
     }
 }

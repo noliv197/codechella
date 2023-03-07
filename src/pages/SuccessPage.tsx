@@ -1,4 +1,5 @@
 import Banner from "../components/Banner"
+import Ticket from "../components/Ticket"
 
 function SuccessPage(){
     return(
@@ -8,6 +9,7 @@ function SuccessPage(){
                 top="50%"
                 content="Seu ingresso está aqui!"
             />
+            <Ticket/>
         </main>
     )
 }

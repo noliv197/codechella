@@ -20,5 +20,9 @@ declare module 'styled-components' {
       primary: string
       secondary: string
     }
+    logo:{
+      name: string
+      symbol: string
+    }
   }
 }
