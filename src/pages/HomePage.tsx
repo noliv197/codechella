@@ -1,4 +1,5 @@
 import Banner from "../components/Banner"
+import Home from "../components/Home"
 
 function HomePage(){
     return(
@@ -8,7 +9,7 @@ function HomePage(){
                 top="45%"
                 content="Boas-vindas ao #CodeChella2023!"
             />
-            ola
+            <Home/>
             <Banner 
                 url="./img/summer-bottom.jfif"
                 top="45%"
