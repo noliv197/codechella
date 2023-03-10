@@ -2,6 +2,7 @@ import CardStyle from "./CardStyle"
 
 interface IProps{
     url: string
+    alt: string
     title: string
     text: string
 }
@@ -9,11 +10,11 @@ interface IProps{
 function Card(props: IProps){
     return(
         <CardStyle>
-            <div className="image" style={{backgroundImage: `url(${props.url})`}}></div>
-            <div className="container">
+            <img src={props.url} alt={props.alt} />
+            <figcaption>
                 <h2>{props.title}</h2>
                 <p>{props.text}</p>
-            </div>
+            </figcaption>
         </CardStyle>
     )
 }

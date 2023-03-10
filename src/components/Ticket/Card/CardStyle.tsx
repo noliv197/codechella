@@ -42,6 +42,24 @@ const CardStyle = styled.figure`
         color: ${props => props.theme.text.secondary};
         margin: var(--spacing-xs) 0;
     }
+
+    @media screen and (max-width: 768px){
+        &{
+            flex-direction: column;
+            height: 100%;
+        }
+        figcaption{
+            text-align: center;
+        }
+        img{
+            padding: 0;
+        }
+    }
+    @media screen and (max-width: 360px){
+        &{
+            background-size: 50%, 15%;
+        }
+    }
 `
 
 export default CardStyle

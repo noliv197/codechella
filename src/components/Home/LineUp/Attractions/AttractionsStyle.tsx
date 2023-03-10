@@ -38,6 +38,7 @@ const AttractionsStyle = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
         color: ${props => props.theme.text.secondary};
         padding: var(--spacing-sm) 0;
     }
@@ -57,6 +58,28 @@ const AttractionsStyle = styled.div`
         font-size: var(--size-sm);
         font-weight: var(--weight-bold);
     }
+
+    @media screen and (max-width: 768px){
+        ul li{
+            margin: var(--spacing-xs) 0;
+        }
+    }
+    @media screen and (max-width: 360px){
+        &{
+            padding: 0 var(--spacing-xs);
+        }
+        hr{
+            display: none;
+        }
+        h3{
+            font-size: var(--size-rg);
+        }
+        ul{
+            flex-direction: column;
+        }
+
+    }
+
 `
 
 export default AttractionsStyle
