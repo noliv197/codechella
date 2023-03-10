@@ -6,7 +6,8 @@ const HighlightStyle = styled.figure`
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
-    padding: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+    box-sizing: border-box;
 
     img{
         width: 609px;
@@ -36,6 +37,29 @@ const HighlightStyle = styled.figure`
         font-weight: var(--weight-bold);
         color: ${props => props.theme.text.secondary};
         line-height: 30px;
+    }
+
+    @media screen and (max-width: 768px){
+        &{
+            flex-direction: column;
+            padding: var(--spacing-sm) 0;
+        }
+        figcaption{
+            width: 100%;
+            padding: 0;
+        }
+        img{
+            width: 100%;
+        }
+        figcaption h4{
+            margin: var(--spacing-rg) 0;
+        }
+    }
+    @media screen and (max-width: 360px){
+
+        figcaption h4{
+            font-size: var(--size-sm);
+        }  
     }
 `
 

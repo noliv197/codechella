@@ -32,6 +32,13 @@ const DropDownStyle = styled.details`
         padding: var(--spacing-sm);
         line-height: 26px;
     }
+
+    @media screen and (max-width: 360px){
+        summary{
+            font-size: var(--size-sm);
+            padding: var(--spacing-sm) var(--spacing-xs);
+        }
+    }
 `
 
 export default DropDownStyle

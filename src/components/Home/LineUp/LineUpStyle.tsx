@@ -9,6 +9,11 @@ const LineUpStyle = styled.section`
         text-align: center;
         margin: var(--spacing-md) 0;
     }
+    @media screen and (max-width: 360px){
+        h2{
+            font-size: var(--size-rg);
+        }
+    }
 `
 
 export default LineUpStyle

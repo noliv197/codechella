@@ -10,13 +10,17 @@ const FooterStyle = styled.footer`
     
     img{
         filter: ${props => props.theme.filter.secondary};
+        width: 233px;
+        heigth: auto;
     }
     section{
         display: flex;
         flex-direction: column;
+        align-items center:
     }
-    section span:first-child{
-        margin-bottom: var(--spacing-sm);
+    div{
+        display: flex;
+        align-items: center;
     }
     ul{
         display: flex;
@@ -24,6 +28,34 @@ const FooterStyle = styled.footer`
     ul a{
         color: ${props => props.theme.text.secondary};
         margin-left: var(--spacing-xs);
+    }
+    .credits span:first-child{
+        margin-bottom: var(--spacing-sm);
+    }
+
+    @media screen and (max-width: 768px){
+        &{
+            flex-direction: column;
+            padding: var(--spacing-sm);
+        }
+        .credits{
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: var(--spacing-rg);
+            width: 100%;
+            justify-content: space-evenly;
+        }
+    }
+    @media screen and (max-width: 360px){
+        &{
+            padding: var(--spacing-sm);
+        }
+        div{
+            flex-direction: column;
+        }
+        ul{
+            margin-top: var(--spacing-sm);
+        }
     }
 `
 

@@ -21,19 +21,19 @@ function Description(){
     return(
         <DescriptionStyle>
             <h2>Mais detalhes sobre os setores:</h2>
-            <ul>
+            <div>
                 {list.map(item=>{
                     return(
-                        <li key={item.title}>
-                            <div 
-                                style={{backgroundImage:`url(${item.img})`}}
-                            ></div>
-                            <h3>{item.title}</h3>
-                            <p>{item.text}</p>
-                        </li>
+                        <figure key={item.title}>
+                            <img src={item.img} alt={item.title} />
+                            <figcaption>
+                                <h3>{item.title}</h3>
+                                <p>{item.text}</p>
+                            </figcaption>
+                        </figure>
                     )
                 })}
-            </ul>
+            </div>
         </DescriptionStyle>
     )
 }

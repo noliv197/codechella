@@ -4,11 +4,12 @@ const MapStyle = styled.figure`
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     img{
-        width: 600px;
+        width: 100%;
         height: auto;
+        max-width: 450px;
     }
     h3{
         font-size: var(--size-rg);
@@ -18,6 +19,7 @@ const MapStyle = styled.figure`
     }
     figcaption{
         flex-grow: 1;
+        // min-width: 388px;
     }
     li{
         display: flex;
@@ -31,6 +33,17 @@ const MapStyle = styled.figure`
     }
     li span{
         color: ${props=> props.theme.text.secondary};
+    }
+
+    @media screen and (max-width: 768px){
+        &{
+            flex-direction: column;
+        }
+    }
+    @media screen and (max-width: 360px){
+        &{
+            width: 90%;
+        }
     }
 `
 

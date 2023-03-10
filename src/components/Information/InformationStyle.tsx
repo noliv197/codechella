@@ -11,6 +11,17 @@ const InformationStyle = styled.section`
         color: ${props => props.theme.text.secondary};
         margin: var(--spacing-md);
     }
+
+    @media screen and (max-width: 768px){
+        &{
+            width: 90%;
+        }
+    }
+    @media screen and (max-width: 360px){
+        h2{
+            font-size: var(--size-rg);
+        }
+    }
 `
 
 export default InformationStyle

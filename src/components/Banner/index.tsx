@@ -9,10 +9,12 @@ interface IProp{
 
 function Banner({content,url,top}: IProp){
     return(
-        <BannerStyle style={{
-            backgroundImage: `url(${url})`, 
-            backgroundPositionY:`${top}`}}
-        >
+        <BannerStyle>
+            <div style={{
+                backgroundImage: `url(${url})`, 
+                backgroundPositionY:`${top}`}}
+                >
+            </div>
             <h1>{content}</h1>
         </BannerStyle>
     )

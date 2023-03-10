@@ -9,40 +9,73 @@ const DescriptionStyle = styled.section`
         margin: var(--spacing-md) 0;
         color: ${props=> props.theme.text.secondary};
     }
-    ul{
+    div{
         display: flex;
         align-items: start;
         justify-content: space-between;
         min-height: 500px;
         padding: 0 var(--spacing-md);
+        box-sizing: border-box;
     }
-    ul li:nth-child(even){
+    figure:nth-child(even){
         align-self: end;
     }
-    li{
+    figure{
         display: flex;
         flex-direction: column;
         width: 380px;
     }
-    li div{
+    figure img{
         width: 100%;
         height: 230px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        object-fit: cover;
         border-radius: 16px;
     }
-    li h3{
+    figcaption h3{
         font-size: var(--size-rg);
         font-weight: var(--weight-Bold);
         margin: var(--spacing-sm) 0;
         color: ${props=> props.theme.text.secondary};
     }
-    li p{
+    figcaption p{
         font-size: var(--size-xs);
         color: ${props=> props.theme.text.secondary};
         padding: 0 var(--spacing-sm);
         line-height: 24px;
+    }
+
+    @media screen and (max-width: 768px){
+        div{
+            flex-direction: column;
+            align-items: center;
+        }
+        figure{
+            width: 100%;
+            align-items: center;
+            margin: var(--spacing-sm) 0;
+        }
+        figure img{
+            width: 382px;
+            heigth: 340px;
+        }
+        figure:nth-child(even){
+            align-self: center;
+        }
+    }
+    @media screen and (max-width: 360px){
+        &{
+            padding: var(--spacing-sm);
+        }
+        h2{
+            font-size: var(--size-rg);
+        }
+        div{
+            padding: 0;
+        }
+        figure img{
+            width: 100%;
+            heigth: 100%;
+        }
     }
 `
 

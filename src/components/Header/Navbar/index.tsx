@@ -2,20 +2,10 @@ import NavbarStyled from "./NavbarStyle"
 function Navbar(){
     return(
         <NavbarStyled>
-            <ul>
-                <li>
-                    <a href="/experience">A experiência</a>
-                </li>
-                <li>
-                    <a href="/sectors">Mapa de setores</a>
-                </li>
-                <li>
-                    <a href="/information">Informações</a>
-                </li>
-                <li>
-                    <a href="/ticket">Ingresso</a>
-                </li>
-            </ul>
+            <a href="/experience">A experiência</a>
+            <a href="/sectors">Mapa de setores</a>
+            <a href="/information">Informações</a>
+            <a href="/ticket">Ingresso</a>
         </NavbarStyled>
     )
 }

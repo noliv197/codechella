@@ -23,6 +23,26 @@ const FormStyle = styled.form`
     .container fieldset{
         width: 45%;
     }
+
+    @media screen and (max-width: 768px){
+        .container{
+            flex-direction: column;
+        }
+        .container fieldset:first-child{
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 360px){
+        &{
+            padding: var(--spacing-sm);
+        }
+        h2{
+            font-size: var(--size-rg);
+        }
+        .container fieldset{
+            width: 100%;
+        }
+    }
 `
 
 export default FormStyle
