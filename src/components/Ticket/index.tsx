@@ -1,7 +1,11 @@
 import Card from "./Card"
 import TicketStyle from "./TicketStyle"
+import { useState } from "react"
 
 function Ticket(){
+    const [cardName, setCardName] = useState('Monica Hillman')
+    const [cardType, setCardType] = useState('Pista')
+    const [cardDate, setCardDate] = useState('11/03')
     return(
         <TicketStyle>
             <h2>
@@ -10,10 +14,15 @@ function Ticket(){
             </h2>
             <Card
                 url="./img/qrcode.png"
-                name="Monica Hillman"
-                sector="Pista"
-                date="11/03"
+                name={cardName}
+                sector={cardType}
+                date={cardDate}
                 place="São Paulo-SP"
+                setFunctions={{
+                    name: setCardName,
+                    type: setCardType,
+                    date: setCardDate
+                }}
             />
         </TicketStyle>
     )
