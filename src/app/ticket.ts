@@ -10,12 +10,13 @@ export default class Ticket{
         type: string, 
         date: Date 
         ){
+        let key = uuid.v4() 
         await this.server.postTicket(
             name,
             email,
             type,
             date,
-            uuid.v4()
+            key
         )
         // window.location.href = `/success?id=${"RXSDF-2874982A-5SAS546S2"}`
     }

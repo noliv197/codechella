@@ -27,7 +27,7 @@ function Form(){
             <Field
                 type="text"
                 label="Nome Completo:"
-                id="nome"
+                id="name"
                 required={true}
                 value={name}
                 setFunction={setName}
@@ -44,7 +44,7 @@ function Form(){
             <div className="container">
                 <Select
                     label="Tipo de ingresso:"
-                    id="tipo"
+                    id="sector"
                     placeholder="Tipo de ingresso:"
                     required={true}
                     itens={[
@@ -60,7 +60,7 @@ function Form(){
                 <Field
                     type="date"
                     label="Data de nascimento:"
-                    id="data"
+                    id="date"
                     placeholder="dd/mm/aaaa"
                     required={true}
                     value={date}

@@ -24,11 +24,11 @@ export default class Server{
                 //         'Accept': 'application/json'
                 //     },
                 //     body: JSON.stringify({
-                //         name: "name",
-                //         email: "email",
-                //         type: "type",
-                //         date: "date",
-                //         id: "id"
+                        // name: name,
+                        // email: email,
+                        // type: type,
+                        // date: date,
+                        // id: id
                 //     })
                 // })
                 // const connectionConverted = await connection.json()
