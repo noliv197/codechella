@@ -6,18 +6,22 @@ import Ticket from "../../app/ticket"
 import { useState } from "react"
 
 function Form(){
-    const [name,setName] = useState('')
+    const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    const [type, setType] = useState('')
-    const [date, setDate] = useState('')
+    const [cpf, setCpf] = useState('')
+    const [birthDate, setBirthDate] = useState('')
+    const [showDate, setShowDate] = useState('')
+    const [sector, setSector] = useState('')
 
     function saveOnServer(event: any){
         event.preventDefault()
         new Ticket().addTicket(
             name,
             email,
-            type,
-            new Date(date)
+            sector,
+            showDate,
+            cpf,
+            birthDate
         )
     }
 
@@ -28,6 +32,7 @@ function Form(){
                 type="text"
                 label="Nome Completo:"
                 id="name"
+                pattern="^([A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]+[,.]?[ ]?|[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]+['-]?)+$"
                 required={true}
                 value={name}
                 setFunction={setName}
@@ -37,16 +42,48 @@ function Form(){
                 label="Email:"
                 placeholder="exemplo@gmail.com"
                 id="email"
+                // pattern="^[A-Za-z0-9.]+@[a-z0-9]+\\.[a-z]+\\.([a-z]+)?$"
                 required={true}
                 value={email}
                 setFunction={setEmail}
             />
             <div className="container">
+                <Field
+                    type="text"
+                    label="CPF:"
+                    id="cpf"
+                    placeholder="xxx.xxx.xxx-xx"
+                    pattern="^\d{3}(\.)?\d{3}(\.)?\d{3}(-)?\d{2}$"
+                    required={true}
+                    value={cpf}
+                    setFunction={setCpf}
+                />
+                <Field
+                    type="date"
+                    label="Data de nascimento:"
+                    id="birthDate"
+                    placeholder="dd/mm/aaaa"
+                    required={true}
+                    value={birthDate}
+                    setFunction={setBirthDate}
+                />
+            </div>
+            <div className="container">
+                <Select
+                    label="Data do Show:"
+                    id="showDate"
+                    itens={[
+                        "Sábado - 11/03",
+                        "Domingo - 12/03"
+                    ]}
+                    required={true}
+                    value={showDate}
+                    setFunction={setShowDate}
+                />
                 <Select
                     label="Tipo de ingresso:"
                     id="sector"
                     placeholder="Tipo de ingresso:"
-                    required={true}
                     itens={[
                         "Pista Premium",
                         "Pista Comum",
@@ -54,17 +91,9 @@ function Form(){
                         "Cadeiras Superiores",
                         "Rampas"
                     ]}
-                    value={type}
-                    setFunction={setType}
-                />
-                <Field
-                    type="date"
-                    label="Data de nascimento:"
-                    id="date"
-                    placeholder="dd/mm/aaaa"
                     required={true}
-                    value={date}
-                    setFunction={setDate}
+                    value={sector}
+                    setFunction={setSector}
                 />
             </div>
             <Button icon="arrow" type="submit">Avançar</Button>

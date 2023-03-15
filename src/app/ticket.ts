@@ -7,18 +7,22 @@ export default class Ticket{
     public async addTicket(
         name: string, 
         email: string, 
-        type: string, 
-        date: Date 
+        sector: string,
+        showDate: string,
+        cpf: string, 
+        birthDate: string 
         ){
         let key = uuid.v4() 
         await this.server.postTicket(
             name,
             email,
-            type,
-            date,
+            sector,
+            showDate,
+            cpf,
+            birthDate,
             key
         )
-        window.location.href = `/success?id=${key}`
+        // window.location.href = `/success?id=${key}`
     }
     public async detailTicket(id: string | null){
         try{

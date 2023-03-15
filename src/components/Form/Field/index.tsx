@@ -6,6 +6,8 @@ interface IProps{
     label: string
     id: string
     placeholder?: string
+    pattern?: string
+    length?: number
     required: boolean
     value: string
     setFunction: React.Dispatch<React.SetStateAction<string>>
@@ -32,16 +34,12 @@ function Field(props: IProps){
             <input 
                 id={props.id}
                 type={props.type} 
-                required={props.required} 
                 placeholder={props.placeholder}
                 value={props.value}
+                pattern={props.pattern}
+                required={props.required} 
                 onChange={changeValue}
                 onBlur={validate}
-                // pattern={
-                //     props.id === 'email'? "^[A-Za-z0-9.]+@[a-z0-9]+\\.[a-z]+\\.([a-z]+)?$" : 
-                //     props.id === 'name'? "^([A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]+[,.]?[ ]?|[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]+['-]?)+$": 
-                //     undefined
-                // }
             />
             <span></span>
         </FieldStyle>

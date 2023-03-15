@@ -15,7 +15,7 @@ function Header() {
     return (
       <HeaderStyled>
         <div>
-          <img src="./img/logo.svg" alt="Logo da Codechella" />
+          <a href="/"><img src="./img/logo.svg" alt="Logo da Codechella" /></a>
           <Navbar/>
           <button onClick={() => dropMenu(menu)}>
             <GiHamburgerMenu/>

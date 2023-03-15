@@ -17,7 +17,7 @@ const SelectStyle = styled.fieldset`
         border: none;
         padding: var(--spacing-xs);
         box-sizing: border-box;
-        font-size: var(--size-xs);
+        font-size: var(--size-sm);
         color: ${props=> props.theme.text.secondary};
     }
     span{
