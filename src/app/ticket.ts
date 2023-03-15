@@ -18,11 +18,12 @@ export default class Ticket{
             date,
             key
         )
-        // window.location.href = `/success?id=${"RXSDF-2874982A-5SAS546S2"}`
+        window.location.href = `/success?id=${key}`
     }
     public async detailTicket(id: string | null){
         try{
             const data = await this.server.getTicket(id)
+            console.log(new Date(data.date))
             return(
                 {
                     name: data.name,

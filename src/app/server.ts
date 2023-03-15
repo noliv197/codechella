@@ -17,31 +17,22 @@ export default class Server{
         id: string | number[]
         ){
             try{
-                // const connection = await fetch(this.url,{
-                //     method: "POST",
-                //     headers: {
-                //         "Content-type": "application/json",
-                //         'Accept': 'application/json'
-                //     },
-                //     body: JSON.stringify({
-                        // name: name,
-                        // email: email,
-                        // type: type,
-                        // date: date,
-                        // id: id
-                //     })
-                // })
-                // const connectionConverted = await connection.json()
-                // return connectionConverted
-                console.log(
-                    JSON.stringify({
+                const connection = await fetch(this.url,{
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json",
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
                         name: name,
                         email: email,
                         type: type,
                         date: date,
                         id: id
                     })
-                )
+                })
+                const connectionConverted = await connection.json()
+                return connectionConverted
             }
             catch(err){
                 console.log(err)

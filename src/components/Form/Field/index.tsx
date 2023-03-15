@@ -37,11 +37,11 @@ function Field(props: IProps){
                 value={props.value}
                 onChange={changeValue}
                 onBlur={validate}
-                pattern={
-                    props.id === 'email'? "^[A-Za-z0-9.]+@[a-z0-9]+\\.[a-z]+\\.([a-z]+)?$" : 
-                    props.id === 'name'? "^([A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]+[,.]?[ ]?|[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]+['-]?)+$": 
-                    undefined
-                }
+                // pattern={
+                //     props.id === 'email'? "^[A-Za-z0-9.]+@[a-z0-9]+\\.[a-z]+\\.([a-z]+)?$" : 
+                //     props.id === 'name'? "^([A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]+[,.]?[ ]?|[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]+['-]?)+$": 
+                //     undefined
+                // }
             />
             <span></span>
         </FieldStyle>
