@@ -27,6 +27,8 @@ const GlobalVariables = createGlobalStyle`
         --color-groundFloor: #01A89E;
         --color-superiorFloor: #3F51B5;
         --color-ramp: #0E7DF1;
+        --color-valid: #2fbb3b;
+        --color-invalid: #bb2f2f;
     }
 `
 export default GlobalVariables

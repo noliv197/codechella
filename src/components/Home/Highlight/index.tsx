@@ -16,7 +16,11 @@ function Highlight(){
                     Somos um festival diverso, com vários artistas e referências. 
                     Divirta-se!
                 </p>
-                <Button icon="ticket">Comprar ingresso!</Button>
+                <Button 
+                    icon="ticket" 
+                    type={undefined} 
+                    url={"/ticket"}
+                >Comprar ingresso!</Button>
             </figcaption>
         </HighlightStyle>
     )
