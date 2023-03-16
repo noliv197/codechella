@@ -2,6 +2,7 @@ import Banner from "../components/Banner"
 import Information from "../components/Information"
 
 function InformationPage(){
+    document.title = 'Codechella - Informações'
     return(
         <main>
             <Banner 

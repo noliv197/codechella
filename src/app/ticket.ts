@@ -13,6 +13,7 @@ export default class Ticket{
         birthDate: string 
         ){
         let key = uuid.v4() 
+        let qrcode = `https://api.qrserver.com/v1/create-qr-code/?data=${key}`
         await this.server.postTicket(
             name,
             email,
@@ -20,19 +21,20 @@ export default class Ticket{
             showDate,
             cpf,
             birthDate,
+            qrcode,
             key
         )
-        // window.location.href = `/success?id=${key}`
+        window.location.href = `/success?id=${key}`
     }
     public async detailTicket(id: string | null){
         try{
             const data = await this.server.getTicket(id)
-            console.log(new Date(data.date))
             return(
                 {
+                    qrcode: data.qrcode,
                     name: data.name,
-                    type: data.type,
-                    date: data.date
+                    type: data.sector,
+                    date: data.showDate
                 }
             )
         }catch(err){

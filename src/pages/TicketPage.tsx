@@ -2,6 +2,7 @@ import Banner from "../components/Banner"
 import Form from "../components/Form"
 
 function TicketPage(){
+    document.title = 'Codechella - Ingresso'
     return(
         <main>
             <Banner 
