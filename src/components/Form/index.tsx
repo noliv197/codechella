@@ -42,7 +42,7 @@ function Form(){
                 label="Email:"
                 placeholder="exemplo@gmail.com"
                 id="email"
-                // pattern="^[A-Za-z0-9.]+@[a-z0-9]+\\.[a-z]+\\.([a-z]+)?$"
+                pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,}$"
                 required={true}
                 value={email}
                 setFunction={setEmail}

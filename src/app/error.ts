@@ -27,9 +27,11 @@ export default class Error{
                 patternMismatch: 'Email inválido'
             },
             sector:{
+                valueMissing: 'Esse campo não pode estar vazio',
                 customError: 'Selecione um tipo de ingresso'
             },
             showDate:{
+                valueMissing: 'Esse campo não pode estar vazio',
                 customError: 'Selecione uma data'
             },
             cpf:{
@@ -49,7 +51,6 @@ export default class Error{
     showError(element:HTMLInputElement | HTMLSelectElement, type: string){
         let message = '';
         this.types.forEach((err: string) => {
-            console.log(err)
             if(element.validity[err]){
                 message = this.messages[type][err];
             }

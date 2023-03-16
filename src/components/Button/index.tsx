@@ -6,6 +6,8 @@ interface IProps{
     children: string
     icon: string
     type: "button" | "submit" | "reset" | undefined
+    onclick?: (event:any) => void
+    onsubmit?: (event:any) => void
     url?: string
 }
 

@@ -8,8 +8,9 @@ interface IProp{
     date: string
     place: string
     setFunctions: {
+        qrcode: React.Dispatch<React.SetStateAction<string>>
         name: React.Dispatch<React.SetStateAction<string>>
-        type: React.Dispatch<React.SetStateAction<string>>
+        sector: React.Dispatch<React.SetStateAction<string>>
         date: React.Dispatch<React.SetStateAction<string>>
     }
 }
@@ -21,8 +22,9 @@ function Card(props: IProp){
             let id = new URL(String(window.location)).searchParams.get('id')
             if (id !== null){
                 let data = await new Ticket().detailTicket(id)
+                props.setFunctions.qrcode(data?.qrcode)
                 props.setFunctions.name(data?.name)
-                props.setFunctions.type(data?.type)
+                props.setFunctions.sector(data?.type)
                 props.setFunctions.date(data?.date) 
             }
         }

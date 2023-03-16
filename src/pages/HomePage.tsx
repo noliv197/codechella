@@ -2,6 +2,7 @@ import Banner from "../components/Banner"
 import Home from "../components/Home"
 
 function HomePage(){
+    document.title = 'Codechella - Homepage'
     return(
         <main>
             <Banner 

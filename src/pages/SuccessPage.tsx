@@ -2,6 +2,7 @@ import Banner from "../components/Banner"
 import Ticket from "../components/Ticket"
 
 function SuccessPage(){
+    document.title = 'Codechella - Reserva'
     return(
         <main>
             <Banner 

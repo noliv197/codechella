@@ -4,7 +4,8 @@ import { useState } from "react"
 
 function Ticket(){
     const [cardName, setCardName] = useState('Monica Hillman')
-    const [cardType, setCardType] = useState('Pista')
+    const [qrcode, setQrcode] = useState('./img/qrcode.png')
+    const [cardSector, setCardSector] = useState('Pista')
     const [cardDate, setCardDate] = useState('11/03')
     return(
         <TicketStyle>
@@ -13,14 +14,15 @@ function Ticket(){
                 Seu ingresso está aqui, apresente na entrada do evento e divirta-se!
             </h2>
             <Card
-                url="./img/qrcode.png"
+                url={qrcode}
                 name={cardName}
-                sector={cardType}
+                sector={cardSector}
                 date={cardDate}
                 place="São Paulo-SP"
                 setFunctions={{
+                    qrcode: setQrcode,
                     name: setCardName,
-                    type: setCardType,
+                    sector: setCardSector,
                     date: setCardDate
                 }}
             />

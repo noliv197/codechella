@@ -2,6 +2,7 @@ import Banner from "../components/Banner"
 import Sector from "../components/Sector"
 
 function SectorPage(){
+    document.title = 'Codechella - Mapa de setores'
     return(
         <main>
             <Banner 
