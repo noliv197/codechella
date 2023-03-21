@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HeaderStyled = styled.header`
+const HeaderStyle = styled.header`
     background-color: ${props => props.theme.background.primary};
     
     div{
@@ -31,7 +31,7 @@ const HeaderStyled = styled.header`
             flex-direction: column;
         }
     }
-    @media screen and (max-width: 360px){
+    @media screen and (max-width: 450px){
         div{
             flex-direction: row;
         }
@@ -47,4 +47,4 @@ const HeaderStyled = styled.header`
     }
 `
 
-export default HeaderStyled
+export default HeaderStyle

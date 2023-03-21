@@ -20,7 +20,7 @@ const NavbarStyled = styled.nav`
             justify-content: space-evenly;
         }
     }
-    @media screen and (max-width: 360px){
+    @media screen and (max-width: 450px){
         &{
            display: none;
         }

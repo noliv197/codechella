@@ -11,7 +11,7 @@ const FooterStyle = styled.footer`
     img{
         filter: ${props => props.theme.filter.secondary};
         width: 233px;
-        heigth: auto;
+        height: auto;
     }
     section{
         display: flex;

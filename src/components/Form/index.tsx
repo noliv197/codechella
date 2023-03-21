@@ -1,6 +1,6 @@
 import Button from "../Button"
 import Field from "./Field"
-import FormStyle from "./FormStyled"
+import FormStyle from "./FormStyle"
 import Select from "./Select"
 import Ticket from "../../app/ticket"
 import { useState } from "react"

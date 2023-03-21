@@ -4,7 +4,7 @@ const MapStyle = styled.figure`
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    width: 80%;
+    width: fit-content;
     margin: 0 auto;
     img{
         width: 100%;
@@ -18,7 +18,7 @@ const MapStyle = styled.figure`
         margin-bottom: var(--spacing-sm);
     }
     figcaption{
-        flex-grow: 1;
+        // flex-grow: 1;
         // min-width: 388px;
     }
     li{
