@@ -25,22 +25,22 @@ function Map(){
     ]
     return(
         <MapStyled>
-                <img src="./img/sectors.png" alt="Mapa de setores" />
-                <figcaption>
-                    <h3>Legenda:</h3>
-                    <ul>
-                        {list.map(item => {
-                            return (
-                                <li key={item.name}>
-                                    <div 
-                                        style={{backgroundColor: `${item.color}`}}
-                                    ></div>
-                                    <span>{item.name}</span>
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </figcaption>
+            <img src="./img/sectors.png" alt="Mapa de setores" />
+            <figcaption>
+                <h3>Legenda:</h3>
+                <ul>
+                    {list.map(item => {
+                        return (
+                            <li key={item.name}>
+                                <div 
+                                    style={{backgroundColor: `${item.color}`}}
+                                ></div>
+                                <span>{item.name}</span>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </figcaption>
         </MapStyled>
     )
 }

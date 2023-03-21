@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+<img src="./public/img/logo.svg" alt="Codechella">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table Of Contents
+- [About The Project](#about-the-project)
 
-## Available Scripts
+- [Features](#features)
 
-In the project directory, you can run:
+- [Build With](#build-with)
 
-### `npm start`
+## About The Project
+<img src="http://img.shields.io/static/v1?label=Development&message=Finished&color=GREEN&style=for-the-badge"/>
+<img src="http://img.shields.io/static/v1?label=CODE%20REVIEW&message=Not%20Started&color=red&style=for-the-badge"/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Context
+This project is a front-end challenge designed by Alura.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The goal is to develop a web application from scratch and add functionalities according to customer needs. 
 
-### `npm test`
+To view my project click <a href="codechella-mu.vercel.app" target="_blank">here</a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Challenge
+CodeChella is an alternative music festival that takes place annually, which is composed of different genres and aims to promote an enchanting and unforgettable experience for the visitor, providing multicultural and social integration. Aiming at publicizing it and selling tickets, the festival wants to implement a website that enables these actions:
 
-### `npm run build`
+* A home page that will show the attractions of the festival;
+* A page to explain the festival experience, showing the different stages;
+* A page to demonstrate the sectors available for ticket purchase;
+* A FAQ page;
+* A page for purchasing tickets by filling in the form;
+* A page to show the generated ticket.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It is __very important that the website is responsive__ to give customers the ease of purchasing through mobile devices.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Layout
+* The desktop and mobile templates are available [here](https://www.figma.com/file/xHLPBeA2ujaXbBjHMK9xh7/CodeChella-%7C-Challenge-I---Front-end-2023?node-id=48%3A205&t=xRQfFGZaPrKNRWtn-1)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* I used the desktop first approach (no particular reason) to create the pages
 
-### `npm run eject`
+<img src="https://i.imgur.com/5XshY7v.gif" alt="Layout">
+<img src="https://i.imgur.com/isG59oi.gif" alt="Responsive Layout">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Features 
+- ` accordion`: :heavy_check_mark:
+  * To display the questions and answers I used the html tag ```details``` and ```summary```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="https://i.imgur.com/uM541dT.gif" alt="Q&A accordion">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `form validation`: :heavy_check_mark:
+  * Each input have its own validation
+    * All of them are required
+    * Email, name and CPF have pattern validation
+    * CPF have a custom validation to check if the CPF is valid
+    * Date have a custom validation to check if the the user is under age
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<img src="https://i.imgur.com/kieQ468.gif" alt="Form validation">
 
-## Learn More
+- `submit validation`: :heavy_check_mark:
+    * If all the fields are valid, the information is send to the server
+        * a random key is generated to server as an ``id``
+        * a qrcode is generated based on the ``id``
+        * the user is redirected to the ticket display page using the ``id``
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `exihibt ticket`: :heavy_check_mark: 
+  * Once the ticket page opens, a ``GET`` requisition to the a server is made and the ``qrcode, name, sector and date`` are displayed according to the user ``id``
+    * I used a json server, just to mimic a server temporarily. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="https://i.imgur.com/YBY2NPS.gif" alt="Ticket">
+
+## Build With
+:small_blue_diamond: React.js
+
+:small_blue_diamond: Styled Components
+
+:small_blue_diamond: React Router
+
+:small_blue_diamond: Json Server

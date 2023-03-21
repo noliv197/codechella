@@ -1,13 +1,12 @@
 import Description from "./Description"
 import Map from "./Map"
-import SectorStyled from "./SectorStyle"
 
 function Sector(){
     return(
-        <SectorStyled>
+        <section>
             <Map/>
             <Description/>
-        </SectorStyled>
+        </section>
     )
 }
 

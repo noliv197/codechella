@@ -16,7 +16,6 @@ interface IProp{
 }
 
 function Card(props: IProp){
-
     async function updateCard(){
         try{
             let id = new URL(String(window.location)).searchParams.get('id')

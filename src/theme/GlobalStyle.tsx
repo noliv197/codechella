@@ -21,13 +21,9 @@ const GlobalStyle = createGlobalStyle`
 		font: inherit;
 		vertical-align: baseline;
 	}
-
 	article, aside, details, figcaption, figure, 
 	footer, header, hgroup, menu, nav, section {
 		display: block;
-	}
-	body {
-		line-height: 1;
 	}
 	ol, ul {
 		list-style: none;
@@ -35,11 +31,14 @@ const GlobalStyle = createGlobalStyle`
 	a{
 		text-decoration: none;
 	}
-
+	
 	body {
+		line-height: 1;
 		font-family: var(--font-primary), sans-serif;
+		min-height: 100vh;
 	}
 	main{
+		min-height: calc(100vh - (146px + 82px));
 		background-image: linear-gradient(
 			${props => props.theme.background.gradient.light},
 			${props => props.theme.background.gradient.medium},

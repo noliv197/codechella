@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-import HeaderStyled from "./HeaderStyled";
+import HeaderStyle from "./HeaderStyle";
 import {GiHamburgerMenu} from "react-icons/gi"
 import Hamburger from "./Hamburger";
 import { useState } from 'react';
@@ -13,7 +13,7 @@ function Header() {
       setMenu('open')
   }
     return (
-      <HeaderStyled>
+      <HeaderStyle>
         <div>
           <a href="/"><img src="./img/logo.svg" alt="Logo da Codechella" /></a>
           <Navbar/>
@@ -22,7 +22,7 @@ function Header() {
           </button>
         </div>
         <Hamburger state={menu} setState={setMenu}/>
-      </HeaderStyled>
+      </HeaderStyle>
     );
   };
     
